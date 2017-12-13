@@ -2,7 +2,7 @@ Example data formats for the sDIV project *sEcoEvo: Biodiversity Dynamics – Th
 
 * Time calibrated trees (with branch lengths even if unresolved)
 
-An example tree in Newick format is in the file **example.newick**. The structure of the tree looks like this:
+An example tree in Newick format is in the file **example.newick**. Please note that trees can include both sampled and unsampled lineages (the example tree includes 7 lineages that were not sampled in the local community). The structure of the tree looks like this:
 
  <img src="https://github.com/continuousity/example_data/blob/master/example_tree.jpeg" width="500">
 
