@@ -5,7 +5,8 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+opts_chunk$set(echo = FALSE)
 ```
 
 <style type="text/css">
@@ -24,7 +25,7 @@ We are providing example data for all the different data types we are interested
 
 
 ```{r}
-knitr::include_graphics('https://github.com/continuousity/example_data/raw/master/example_tree.jpeg', 
+include_graphics('https://github.com/continuousity/example_data/raw/master/example_tree.jpeg', 
                         auto_pdf = FALSE, dpi = NA)
 ```
 
@@ -34,7 +35,7 @@ knitr::include_graphics('https://github.com/continuousity/example_data/raw/maste
 
 ```{r}
 x <- read.csv('https://raw.githubusercontent.com/continuousity/example_data/master/example_abundances.csv', row.names = 1)
-knitr::kable(x, caption = '')
+kable(x, caption = '')
 ```
 
 * Per location per taxon sequence data (including identical sequences). 
@@ -47,7 +48,7 @@ knitr::kable(x, caption = '')
 
 ```{r}
 seqMap <- read.csv('https://raw.githubusercontent.com/continuousity/example_data/master/example_pops.csv')
-knitr::kable(head(seqMap), caption = '')
+kable(head(seqMap), caption = '')
 ```
 
 * Site metadata file
@@ -56,5 +57,5 @@ knitr::kable(head(seqMap), caption = '')
 
 ```{r}
 siteMap <- read.csv('https://raw.githubusercontent.com/continuousity/example_data/master/site_metadata.csv')
-knitr::kable(siteMap, caption = '')
+kable(siteMap, caption = '')
 ```
