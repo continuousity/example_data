@@ -30,10 +30,10 @@ knitr::include_graphics('https://github.com/continuousity/example_data/raw/maste
 
 * Abundances 
 
-    > We provide an example site-by-species file including 3 sites and the 5 sampled species (B, D, E, F, & K) in the file **example_abundances.txt**. This is a simple tab-delimited text file (but can also be a CSV file) with rows corresponding to sites, and columns corresponding to species, cells contain the abundance of each species at each site.
+    > We provide an example site-by-species file including 3 sites and the 5 sampled species (B, D, E, F, & K) in the file **example_abundances.csv**. This is a simple CSV file with rows corresponding to sites, and columns corresponding to species, cells contain the abundance of each species at each site.
 
 ```{r}
-x <- read.table('https://raw.githubusercontent.com/continuousity/example_data/master/example_abundances.txt', header = TRUE)
+x <- read.csv('https://raw.githubusercontent.com/continuousity/example_data/master/example_abundances.csv', row.names = 1)
 knitr::kable(x, caption = '')
 ```
 
@@ -43,18 +43,18 @@ knitr::kable(x, caption = '')
 
 * Sample/species/site mapping file
 
-    > Sequence data need to be matched to species and sites. We include an example file called **example_pops.txt** which does this. This is a tab delimited text file (but could also be CSV) where each row contains 3 items, the sample id (which should match the sample name in the fastq files), the species ID (which should match the ID in the newick tree), and the sample site (which should match the site name in the abundances file).
+    > Sequence data need to be matched to species and sites. We include an example file called **example_pops.csv** which does this. This is CSV where each row contains 3 items, the sample id (which should match the sample name in the fastq files), the species ID (which should match the ID in the newick tree), and the sample site (which should match the site name in the abundances file).
 
 ```{r}
-seqMap <- read.table('https://raw.githubusercontent.com/continuousity/example_data/master/example_pops.txt', header = TRUE)
+seqMap <- read.csv('https://raw.githubusercontent.com/continuousity/example_data/master/example_pops.csv')
 knitr::kable(head(seqMap), caption = '')
 ```
 
 * Site metadata file
 
-    > We need to know a few things about sites, most importantly their goegraphic locations, and hopefully also something about sampling methodology such as area, effort, sampling technique.  The included example file **site_metadata.txt** (tab delimited in this case, but CSV is equally good) refers to arthropod pitfall trapping as an example
+    > We need to know a few things about sites, most importantly their goegraphic locations, and hopefully also something about sampling methodology such as area, effort, sampling technique.  The included example file **site_metadata.csv** refers to arthropod pitfall trapping as an example.
 
 ```{r}
-siteMap <- read.table('https://raw.githubusercontent.com/continuousity/example_data/master/site_metadata.txt', header = TRUE, sep = '\t')
+siteMap <- read.csv('https://raw.githubusercontent.com/continuousity/example_data/master/site_metadata.csv')
 knitr::kable(siteMap, caption = '')
 ```
