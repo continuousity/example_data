@@ -22,14 +22,11 @@ We are providing example data for all the different data types we are interested
   
     > An example tree in Newick format is in the file **example.newick**. Please note that trees can include both sampled and unsampled lineages (the example tree includes 7 lineages that were not sampled in the local community). The structure of the tree looks like this:
 
-```{r, fig.width=5, fig.height=4}
-tre <- ape::read.tree(text = readLines('https://raw.githubusercontent.com/continuousity/example_data/master/example.newick'))
-plot(tre)
-axis(1)
-mtext('Time (My)', side = 1, line = 2)
-```
 
-![](https://github.com/continuousity/example_data/raw/master/example_tree.jpeg)
+```{r}
+knitr::include_graphics('https://github.com/continuousity/example_data/raw/master/example_tree.jpeg', 
+                        auto_pdf = FALSE, dpi = NA)
+```
 
 * Abundances 
 
