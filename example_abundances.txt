@@ -1,0 +1,4 @@
+    B   D   E   F   K
+site1   5   5   5   5   5
+site2   5   5   5   5   5
+site3   5   5   5   5   5
