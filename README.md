@@ -27,14 +27,14 @@ Here we provide example data for all the different data types we are interested 
 
     > Sequence data need to be matched to species and sites. We include an example file called **example\_pops.csv** which does this. This is CSV where each row contains 3 items, the sample id (which should match the sample name in the fastq files), the species ID (which should match the ID in the newick tree), and the sample site (which should match the site name in the abundances file).
 
-| Sample\_ID | Species |  Site|
-|:-----------|:--------|-----:|
-| B\_0\_1    | B       |     1|
-| B\_1\_1    | B       |     1|
-| B\_2\_1    | B       |     1|
-| B\_3\_1    | B       |     1|
-| B\_4\_1    | B       |     1|
-| D\_0\_1    | D       |     1|
+| sample\_ID | species | site  |
+|:-----------|:--------|:------|
+| B\_0\_1    | B       | site1 |
+| B\_1\_1    | B       | site1 |
+| B\_2\_1    | B       | site1 |
+| B\_3\_1    | B       | site1 |
+| B\_4\_1    | B       | site1 |
+| D\_0\_1    | D       | site1 |
 
 -   Site metadata file
 
