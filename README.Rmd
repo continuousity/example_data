@@ -20,7 +20,7 @@ Here we provide example data for all the different data types we are interested 
 
 ```{r}
 include_graphics('https://github.com/continuousity/example_data/raw/master/example_tree.jpeg', 
-                        auto_pdf = FALSE, dpi = NA)
+                        auto_pdf = FALSE)
 ```
 
 * Abundances 
