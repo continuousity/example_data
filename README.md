@@ -1,24 +1,52 @@
-## Example data formats for the sDIV project *sEcoEvo: Biodiversity Dynamics – The Nexus Between Space & Time*. 
+<style type="text/css">
+.table {
+    width: 40%;
+}
+</style>
+Example data formats for the sDIV project *sEcoEvo: Biodiversity Dynamics – The Nexus Between Space & Time*
+-----------------------------------------------------------------------------------------------------------
 
 We are providing example data for all the different data types we are interested in gathering for communities.
 
-* Time calibrated trees (with branch lengths even if unresolved)
+-   Time calibrated trees (with branch lengths even if unresolved)
 
-An example tree in Newick format is in the file **example.newick**. Please note that trees can include both sampled and unsampled lineages (the example tree includes 7 lineages that were not sampled in the local community). The structure of the tree looks like this:
+    > An example tree in Newick format is in the file **example.newick**. Please note that trees can include both sampled and unsampled lineages (the example tree includes 7 lineages that were not sampled in the local community). The structure of the tree looks like this:
 
- <img src="https://github.com/continuousity/example_data/raw/master/example_tree.jpeg" width="500">
+![](https://github.com/continuousity/example_data/raw/master/example_tree.jpeg)
 
+-   Abundances
 
-* Abundances 
+    > We provide an example site-by-species file including 3 sites and the 5 sampled species (B, D, E, F, & K) in the file **example\_abundances.csv**. This is a simple CSV file with rows corresponding to sites, and columns corresponding to species, cells contain the abundance of each species at each site.
 
-We provide an example site-by-abundance file including 3 sites and the 5 sampled species (B, D, E, F, & K) in the file **example_abundances.txt**. This is a simple tab-delimited text file with rows corresponding to sites, and columns corresponding to species.
+|       |    B|    D|    E|    F|    K|
+|-------|----:|----:|----:|----:|----:|
+| site1 |    0|    8|    2|    5|    7|
+| site2 |    8|    0|    8|    1|    2|
+| site3 |    0|    0|    3|    8|   15|
 
-* Per location per taxon sequence data (including identical sequences). 
+-   Per location per taxon sequence data (including identical sequences).
 
-Example sequence data is shown in the **fastqs/** directory, with one fastq file per site, including all sequences for all individuals sequenced at that site. We will use these sequences to calculate nucleotide diversity per species per site.
+    > Example sequence data is shown in the **fastqs/** directory, with one fastq file per site, including all sequences for all individuals sequenced at that site. We will use these sequences to calculate nucleotide diversity per species per site.
 
-* Sample/species/site mapping file
+-   Sample/species/site mapping file
 
-We include one additional example file which is a mapping of sample names to species ID and sampling site called **example_pops.txt**. This is a tab delimited text file with an optional header where each row contains 3 items, the sample id (which should match the sample name in the fastq files), the species ID (which should match the ID in the newick tree), and the sample site (which should match the site name in the abundances file).
+    > Sequence data need to be matched to species and sites. We include an example file called **example\_pops.csv** which does this. This is CSV where each row contains 3 items, the sample id (which should match the sample name in the fastq files), the species ID (which should match the ID in the newick tree), and the sample site (which should match the site name in the abundances file).
 
+| Sample\_ID | Species |  Site|
+|:-----------|:--------|-----:|
+| B\_0\_1    | B       |     1|
+| B\_1\_1    | B       |     1|
+| B\_2\_1    | B       |     1|
+| B\_3\_1    | B       |     1|
+| B\_4\_1    | B       |     1|
+| D\_0\_1    | D       |     1|
 
+-   Site metadata file
+
+    > We need to know a few things about sites, most importantly their goegraphic locations, and hopefully also something about sampling methodology such as area, effort, sampling technique. The included example file **site\_metadata.csv** refers to arthropod pitfall trapping as an example.
+
+| site  |        lon|       lat| method  | duration |
+|:------|----------:|---------:|:--------|:---------|
+| site1 |  -155.5134|  19.23092| pitfall | 5 days   |
+| site2 |  -155.5167|  19.23250| pitfall | 5 days   |
+| site3 |  -155.5155|  19.23053| pitfall | 5 days   |
