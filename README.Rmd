@@ -1,19 +1,13 @@
 ---
 output: 
-    pdf_document:
-        keep_tex: true
+    md_document:
+        variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
 library(knitr)
 opts_chunk$set(echo = FALSE)
 ```
-
-<style type="text/css">
-.table {
-    width: 40%;
-}
-</style>
 
 ## Example data formats for the sDIV project *sEcoEvo: Biodiversity Dynamics – The Nexus Between Space & Time*
 

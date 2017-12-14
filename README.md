@@ -1,8 +1,3 @@
-<style type="text/css">
-.table {
-    width: 40%;
-}
-</style>
 Example data formats for the sDIV project *sEcoEvo: Biodiversity Dynamics – The Nexus Between Space & Time*
 -----------------------------------------------------------------------------------------------------------
 
